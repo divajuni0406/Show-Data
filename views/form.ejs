@@ -1,0 +1,32 @@
+<%-include('header')-%>
+<div class="row">
+    <div class="col-md-7 m-auto">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">First name</th>
+                    <th scope="col">Last name</th>
+                    <th scope="col">Full name</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% findUser.forEach(us => { %>
+                <tr>
+                    <th scope="row"><%= us.id %></th>
+                    <td><%= us.first_name %></td>
+                    <td><%= us.last_name %></td>
+                    <td><%= us.full_name %></td>
+                    <td><%= us.username %></td>
+                    <td><%= us.email%></td>
+                    <td><%= us.address %></td>
+                </tr>
+            </tbody>
+            <% }) %>
+        </table>
+    </div>
+</div>
+<%-include('footer')-%>
